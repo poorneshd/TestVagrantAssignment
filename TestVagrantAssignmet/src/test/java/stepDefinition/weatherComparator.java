@@ -32,7 +32,12 @@ public class weatherComparator {
 	 
 	 System.out.println("Temperature from API is" + " " + tempApi);
 	 
-	 int variance =tempApi-tempWeb ;
+	 if(tempWeb < tempApi)
+	 {
+		 
+	 
+	 
+	 int variance =(tempApi-tempWeb) ;
 	  
 	  
 	 
@@ -53,8 +58,30 @@ public class weatherComparator {
 	  } 
 	  
 	 
-	  
-	 
+	 }
+	 else {
+		 
+		 int variance =(tempWeb - tempApi) ;
+		  
+		  
+		 
+		  if(variance <= 2) 
+		  {
+			  
+			  System.out.println("Temperature from Web and API matches with acceptable variance of" + " " + variance);
+			  
+		  } 
+		  
+		 // System.out.println("Temperature from Web and API matches");
+
+		  else
+		  {
+			  
+			  System.out.println("Temperature from Web and API doest not matches variance is out of acceptable" + " " + variance);
+			  
+		  } 
+
+	 }	 
 		
 	}
 
